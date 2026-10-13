@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 18px;
+  color: #f5f8ff;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(81, 105, 174, 0.2), transparent 55%),
+    #0c132b;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+}
+
+.game-shell {
+  position: relative;
+  width: min(100%, 1040px);
+  overflow: hidden;
+  border: 1px solid rgba(177, 202, 255, 0.25);
+  border-radius: 22px;
+  background: #172243;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.4), 0 0 0 7px rgba(109, 144, 228, 0.05);
+}
+
+#game,
+#game canvas {
+  display: block;
+  width: 100%;
+}
+
+#game canvas {
+  height: auto;
+  touch-action: none;
+}
+
+.loading-note {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  margin: 0;
+  color: #dce7ff;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  .game-shell {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+}
